@@ -1,4 +1,4 @@
-### 2023-10-29 at 15:00 to 16:00
+### 2023-10-29 from 15:00 to 16:00
 - **Attendance**: Hoang Nguyen, Aadarsh Marahatta, Evan Nishi
 - **Team updates**:
     * Hoang (4 requirements)
