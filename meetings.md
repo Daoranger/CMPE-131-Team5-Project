@@ -1,29 +1,27 @@
-## Instructions
-- Delete this block before adding to your repository.
-- Delete any instructions you see below they will be within < >
-- This schedule should reflect the meetings from the start of the project until the end of the semester.
-- Write at least 1 meeting per week until the end of the semester
+### 2023-10-29 at 15:00 to 16:00
+- **Attendance**: Hoang Nguyen, Aadarsh Marahatta, Evan Nishi
+- **Team updates**:
+    * Hoang (4 requirements)
+        * Login Requirement
+        * Sign Up Requirement
+        * User Authentication Requirement (security)
+        * User Profile Management Requirement
+        
+    * Aadarsh (3 requirements)
+        * 
+        * 
+        * 
+    * Evan (4 requirements)
+        * 
+        * 
+        * 
+        * 
+    * Andre (3 requirements)
+        * 
+        * 
+        * 
 
-## Meetings
-### 2023-10-29 at 15:00 to 17:00
-- Who attended the meeting
-- Team updates (15min or less)
-<Each team member gives an update of what they did from the last meeting and what
-they plan to do next. If they are stuck, bring it up here to see if others can
-help.>
-- <name> worked on X. Will work on Y next.
-- pair-programming (optional) (25 mins)
-<- Pair program on one part of the project. Driver will be the person responsible
-for that requirement.>
-- Summarize group progress
+- **Roles**:
+    * **Evan (Team Lead)**: Leading meetings, overseeing team tasks, and ensuring that all team members have clear assignments and a shared understanding, while also serving as the team's representative when necessary. (leaderhsip and decision-making). 
 
-### 2023-10-08 at 13:30
-<meeting template would go here>
-<only fill in template once you had the meeting>
-<see example on the last date>
-<use date format YYYY-MM-DD at HH:MM>
-
-### 2023-10-15 at 10:30
-<meeting template would go here>
-<only fill in template once you had the meeting>
-
+    * **Hoang (Team Coordinator)**: Establishing meeting schedules using When2Meet, maintaining meeting notes or documentation, providing assistance to the team lead, and facilitating communication with the professor as required (coordination, organization and communication).
