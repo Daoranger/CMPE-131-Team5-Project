@@ -1,5 +1,5 @@
 # Project Name
 - Hoang Nguyen (@Daoranger)
-- Aadarsh Marahatta (@username)
-- Evan Nishi (@username)
-- Andre Nassar (@username)
+- Aadarsh Marahatta (@amarahatta)
+- Evan Nishi (@Evan-Nishi)
+- Andre Nassar (@Andrenassar)
