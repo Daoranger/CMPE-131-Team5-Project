@@ -1,6 +1,6 @@
 ### 2023-10-29 from 15:00 to 16:00
 - **Attendance**: Hoang Nguyen, Aadarsh Marahatta, Evan Nishi
-- **Team updates**:
+- **Progress**:
     * Hoang (4 requirements)
         * Login Requirement
         * Sign Up Requirement
@@ -21,9 +21,10 @@
         * 
         * 
 
-- **Roles**:
-    * **Evan (Team Lead)**: Leading meetings, overseeing team tasks, and ensuring that all team members have clear assignments and a shared understanding, while also serving as the team's representative when necessary. (leaderhsip and decision-making). 
+    * **Hoang (Team Coordinator)**: Leading meetings, overseeing team tasks, and ensuring that all team members have clear assignments and a shared understanding, while also serving as the team's representative when necessary. Establishing meeting schedules using When2Meet, maintaining meeting notes or documentation, providing assistance to the team lead, and facilitating communication with the professor as required.
 
-    * **Hoang (Team Coordinator)**: Establishing meeting schedules using When2Meet, maintaining meeting notes or documentation, providing assistance to the team lead, and facilitating communication with the professor as required. (coordination, organization and communication).
+### 2023-11-1 from 23:00 to 23:30
+- **Attendance**: Hoang Nguyen, Aadarsh Marahatta, Evan Nishi
+- **Progress**:
+   * Help Andre catching up with what we are doing, discuss about requirements
 
-### 2023-11-5 from 15:00 to 16:00
