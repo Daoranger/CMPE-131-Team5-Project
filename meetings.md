@@ -27,4 +27,4 @@
 - **Attendance**: Hoang Nguyen, Andre Nassar
 - **Progress**:
    * Help Andre catching up with what we are doing, discuss about requirements
-   * Update some README.md and meetings.md
+   * Updated README.md and meetings.md
