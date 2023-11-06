@@ -50,8 +50,8 @@
 - **Alternate Sequence 3:**
 1. There is already an account with the username user chose
 2. Ask the user to choose a different username
-___________________________________________________________________________________________________________________________________________
-***2. User Login to the Account (Hoang Nguyen)***
+
+### ***2. User Login to the Account (Hoang Nguyen)***
 - **Pre-condition:** 
   + User had registered for an account and had one created
   + User has access to login process
@@ -75,8 +75,8 @@ ________________________________________________________________________________
 2. User receive an email to reset password
 3. User enter new password and successfully create new password
 4. User should be able to login with new password
-___________________________________________________________________________________________________________________________________________
-***3. Authentication during Login via Email (Hoang Nguyen)***
+
+### ***3. Authentication during Login via Email (Hoang Nguyen)***
 - **Pre-condition:** 
   + User had registered for an account and had one created
   + User has an Email linked with the account
@@ -112,8 +112,8 @@ ________________________________________________________________________________
 4. User click the cancel button
 5. Close the authentication form
 6. Bring user back to dashboard
-___________________________________________________________________________________________________________________________________________
-***4. User managing their user profile (Hoang Nguyen)***
+
+### ***4. User managing their user profile (Hoang Nguyen)***
 - **Pre-condition:** 
   + User registered and logged into the account
   + User is in the dashboard and have access to user profile
@@ -139,8 +139,8 @@ ________________________________________________________________________________
 2. The changes are invalid
 3. Prompt the user to enter following the requirements
 4. The user can now re-enter the correct information
-__________________________________________________________________________________________________________________________________________
-5. Function to add an image to notes (Andre Nassar)
+
+### ***5. Function to add an image to notes (Andre Nassar)***
 - **Pre-Condition:**
   + The user is logged in into the system and has the permissions to edit and add an image within their notes
 - **Trigger:** The user selects or clicks a specific icon or button within the user interface to add an image to their notes or text
@@ -161,8 +161,8 @@ ________________________________________________________________________________
 - **Alternate Sequence 2:** 
 1. Users image is too large to input into their text box
 2. Users image is too large to input into their text box
-___________________________________________________________________________________________________________________________________________
-6. Search Note Functionality (Andre Nassar)
+
+### ***6. Search Note Functionality (Andre Nassar)***
 - **Pre-Condition:**
   + The user is logged in into the system and the search functionality is accessible on the interface
 - **Trigger:** The user initiates the search function
@@ -179,8 +179,8 @@ ________________________________________________________________________________
 - **Alternate Sequence 1:** 
 1. If the user searches something that there isn't in the system the system will display a “no results” message
 2. Depending on the search the system may tell you to refine your search or keywords
-__________________________________________________________________________________________________________________________________________
-7. Logout of User Account
+
+### ***7. Logout of User Account***
 - **Pre-Condition:**
   + The user is currently logged into their account
 - **Trigger:** The user initiates the logout function.
