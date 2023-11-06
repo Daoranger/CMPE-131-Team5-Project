@@ -52,7 +52,7 @@ describe multiple issues that may arise and their outcomes>
 1. There is already an account with the username user chose
 2. Ask the user to choose a different username
 
-<***2. User Login to the Account (Hoang Nguyen)***>
+</***2. User Login to the Account (Hoang Nguyen)***>
 - **Pre-condition:** 
   + User had registered for an account and had one created
   + User has access to login process
