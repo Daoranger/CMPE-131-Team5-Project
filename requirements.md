@@ -160,7 +160,7 @@
 2. Prompt user to upload allowed file type
 - **Alternate Sequence 2:** 
 1. Users image is too large to input into their text box
-2. Users image is too large to input into their text box
+2. Prompt users to make adjustments in the preview
 
 ### ***6. Search Note Functionality (Andre Nassar)***
 - **Pre-Condition:**
