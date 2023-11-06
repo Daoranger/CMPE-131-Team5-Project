@@ -14,12 +14,13 @@
 13. requirement
 14. requirement
 
-[**Requirement 1**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement1.png)
-[**Requirement 2**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement2.png)
-[**Requirement 3**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement3.png)
-[**Requirement 4**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement4.png)
-[**Requirements 5-7**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement5-7.png)
-<using the syntax [](images/ui1.png) add images in a folder called images/ and place sketches of your webpages>
+## Webpages Sketches
+- [**Requirement 1**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement1.png)
+- [**Requirement 2**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement2.png)
+- [**Requirement 3**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement3.png)
+- [**Requirement 4**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement4.png)
+- [**Requirements 5-7**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement5-7.png)
+- <using the syntax [](images/ui1.png) add images in a folder called images/ and place sketches of your webpages>
 
 ## Non-functional Requirements
 1. Support Multiples Languages
