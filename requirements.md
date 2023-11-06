@@ -183,7 +183,7 @@
 1. If the user searches something that there isn't in the system the system will display a “no results” message
 2. Depending on the search the system may tell you to refine your search or keywords
 
-### ***7. Logout of User Account***
+### ***7. Logout of User Account (Andre Nassar)***
 - **Pre-Condition:**
   + The user is currently logged into their account
 - **Trigger:** The user initiates the logout function.
