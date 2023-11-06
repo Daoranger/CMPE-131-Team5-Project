@@ -24,7 +24,7 @@
 
 <each of the 14 requirements will have a use case associated with it>
 ## Use Cases <Add name of who will write (this specific requirement) and implement (in subsequent milestones) the use case below>
-## ***1. User Register for An Account (Hoang Nguyen)***
+### ***1. User Register for An Account (Hoang Nguyen)***
 - **Pre-condition:** 
   + User don’t have an account yet
   + User has access to registration process
