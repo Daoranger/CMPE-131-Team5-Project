@@ -51,7 +51,7 @@ describe multiple issues that may arise and their outcomes>
 - **Alternate Sequence 3:**
 1. There is already an account with the username user chose
 2. Ask the user to choose a different username
-   
+___________________________________________________________________________________________________________________________________________
 5. Function to add an image to notes (Andre Nassar)
 - **Pre-Condition:**
   + The user is logged in into the system and has the permissions to edit and add an image within their notes
