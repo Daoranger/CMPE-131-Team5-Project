@@ -14,6 +14,7 @@
 13. requirement
 14. requirement
 
+[**Requirement 1**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement1.png)
 <using the syntax [](images/ui1.png) add images in a folder called images/ and place sketches of your webpages>
 
 ## Non-functional Requirements
