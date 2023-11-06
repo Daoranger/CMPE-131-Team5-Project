@@ -5,10 +5,10 @@
 2. Register for An Account
 3. User Authentication via Email
 4. User Profile Management 
-5. User Profile Management
-6. User Add Images to Note
-7. Search Note Functionality
-8. Logout of User Account
+5. User Add Images to Note
+6. Search Note Functionality
+7. Logout of User Account
+8. requirement
 9. requirement
 10. requirement
 11. requirement
