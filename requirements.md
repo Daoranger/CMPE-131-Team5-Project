@@ -90,4 +90,19 @@ ________________________________________________________________________________
   + User can now access the content they were searching for
 - **Alternate Sequence 1:** 
 1. If the user searches something that there isn't in the system the system will display a “no results” message
-2. Depending on the search the system may tell you to refine your search or keywords.
+2. Depending on the search the system may tell you to refine your search or keywords
+__________________________________________________________________________________________________________________________________________
+7. Logout of User Account
+- **Pre-Condition:**
+  + The user is currently logged into their account
+- **Trigger:** The user initiates the logout function.
+- **Primary Sequence:**
+1. The user selects the logout process by clicking on a logout option found in the navigation menu
+2. The system receives the logout request and checks the user’s session and status
+3. The system displays a confirmation message to the user informing them they have been successfully logged out
+4. The user is directed back to the home page/ login page
+- **Primary Postconditions:** 
+  + User is logged out of the system and their account
+  + User is redirected to the login page
+- **Alternate Sequence 1:** 
+1. The user is not active for a certain period of time, so their session is expired prompting to log the user out
