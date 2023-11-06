@@ -28,3 +28,11 @@
 - **Progress**:
    * Help Andre catching up with what we are doing, discuss about requirements
    * Updated README.md and meetings.md
+
+### 2023-11-5 from 21:30 to 22:30
+- **Attendance**: Hoang Nguyen, Andre Nassar
+- **Progress**:
+   * Hoang and Andre finished our requirements and updated requirements.md
+   * Hoang and Andre worked together on the sketches for the webpages for requirements 1-7
+   * Hoang upload a directory with the sketches into GitHub
+   * Hoang updated README.md, add placeholder name
