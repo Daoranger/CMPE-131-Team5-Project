@@ -51,5 +51,28 @@ describe multiple issues that may arise and their outcomes>
 - **Alternate Sequence 3:**
 1. There is already an account with the username user chose
 2. Ask the user to choose a different username
+   
+5. Function to add an image to notes (Andre Nassar)
+- **Pre-Condition:**
+  + The user is logged in into the system and has the permissions to edit and add an image within their notes
+- **Trigger:** The user selects or clicks a specific icon or button within the user interface to add an image to their notes or text
+- **Primary Sequence:**
+1. The user navigates to the text box that they want  to add an image to
+2. The user clicks a symbol that is identified as an image symbol in the text editor
+3. The interface then opens their file manager which allows the user to select a file or image  to   the desired repository
+4. The user selects the image they want to upload and the system accepts the request as long as it is the correct file type, such as PNG, PDF, etc
+5. The interface/system then uploads the image to the server
+6. When the image is uploaded to the server the user will be allowed to see a preview of what they upload into the text box
+7. This will then allow the user to adjust the dimensions of their image before uploading
+8. The user will then press a confirmation button which then allows the system to insert the image into the text box
+- **Primary Postconditions:** 
+  + User can now type in their text box and move the image where it is needed
+- **Alternate Sequence 1:** 
+1. User upload a file type that is not allowed
+2. Prompt user to upload allowed file type
+- **Alternate Sequence 2:** 
+1. Users image is too large to input into their text box
+2. Users image is too large to input into their text box
+
 
 
