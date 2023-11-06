@@ -24,11 +24,12 @@
 
 <each of the 14 requirements will have a use case associated with it>
 ## Use Cases <Add name of who will write (this specific requirement) and implement (in subsequent milestones) the use case below>
+___________________________________________________________________________________________________________________________________________
 ***1. User Register for An Account (Hoang Nguyen)***
-- **Pre-condition:** <can be a list or short description>
+- **Pre-condition:** 
   + User don’t have an account yet
   + User has access to registration process
-- **Trigger:** <can be a list or short description>
+- **Trigger:** 
   + User initiates the registration process
 - **Primary Sequence:**
 1. User accesses the registration page
@@ -37,21 +38,20 @@
 4. System validates the provided information
 5. If the information is valid, create new user account with those information
 6. A confirmation message showed after click register button 
-- **Primary Postconditions:** <can be a list or short description>
+- **Primary Postconditions:** 
   + User can now sign in with their new account
   + User have to go to the login page to sign in
-- **Alternate Sequence 1:** <you can have more than one alternate sequence to
-describe multiple issues that may arise and their outcomes>
+- **Alternate Sequence 1:** 
 1. The information provided is invalid
 2. User re-enter the correct information (whatever was invalid)
 3. User resubmit the registration form
-- **Alternate Sequence 2:** <you can have more than one alternate sequence to describe multiple issues that may arise>
+- **Alternate Sequence 2:** 
 1. There is already an account with the email address user provided
 2. Ask the user to login instead
 - **Alternate Sequence 3:**
 1. There is already an account with the username user chose
 2. Ask the user to choose a different username
-
+___________________________________________________________________________________________________________________________________________
 ***2. User Login to the Account (Hoang Nguyen)***
 - **Pre-condition:** 
   + User had registered for an account and had one created
@@ -76,7 +76,7 @@ describe multiple issues that may arise and their outcomes>
 2. User receive an email to reset password
 3. User enter new password and successfully create new password
 4. User should be able to login with new password
-##########################################################################################################################################
+___________________________________________________________________________________________________________________________________________
 ***3. User Login to the Account (Hoang Nguyen)***
 - **Pre-condition:** 
   + User had registered for an account and had one created
