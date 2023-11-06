@@ -23,7 +23,7 @@
 2. Contact Information/Feedback options
 
 ## Use Cases 
-## ***1. User Register for An Account (Hoang Nguyen)***
+#### ***1. User Register for An Account (Hoang Nguyen)***
 - **Pre-condition:** 
   + User don’t have an account yet
   + User has access to registration process
