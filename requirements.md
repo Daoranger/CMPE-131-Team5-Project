@@ -77,29 +77,69 @@ ________________________________________________________________________________
 3. User enter new password and successfully create new password
 4. User should be able to login with new password
 ___________________________________________________________________________________________________________________________________________
-***3. User Login to the Account (Hoang Nguyen)***
+***3. Authentication during Login via Email (Hoang Nguyen)***
 - **Pre-condition:** 
   + User had registered for an account and had one created
-  + User has access to login process
+  + User has an Email linked with the account
+  + User has access to their email address 
+  + User had logged in and have access to user setting
+  + User is in the user authentication setting page
 - **Trigger:** 
-  + User initiates the registration process
-  + User go to login page
+  + User choose to set up authentication 
 - **Primary Sequence:**
-1. User access to the login page
-2. User provided username/email and password
-3. Give user option to check “remember me” box
-4. User click login button
-5. If information is valid, let user log in
+1. User is in the set up authentication page
+2. Prompt user to re-enter password for security reason
+3. User re-enter password
+4. If valid, the authentication form pop up
+5. User confirm that they want to use the email they provided
+6. Enable email-based authentication
 - **Primary Postconditions:** 
-  + User can now sign in with their new account
-  + User have to go to the login page to sign in
+  + User has successfully set up  their chosen email-based authentication
+  + User get a email confirm that their authentication in set up
+  + Whenever the user login now, an email with the security code will sent to them
 - **Alternate Sequence 1:** 
-1. User provide invalid login information
-2. Prompt the user to re-enter
+1. User want to remove authentication
+2. Ask to re-enter password
+3. Prompt user if to confirm removal of authentication
+4. Email-based authentication is removed.
 - **Alternate Sequence 2:** 
-1. User forgot their password and used Forgot Password
-2. User receive an email to reset password
-3. User enter new password and successfully create new password
-4. User should be able to login with new password
+1. User enter invalid password
+2. User authentication form will not pop up
+3. System ask user to re-enter until 3 tries
+- **Alternate Sequence 3:**
+1. User enter valid password
+2. User authentication form pop up
+3. User want to cancel to process
+4. User click the cancel button
+5. Close the authentication form
+6. Bring user back to dashboard
+___________________________________________________________________________________________________________________________________________
+***4. User managing their user profile (Hoang Nguyen)***
+- **Pre-condition:** 
+  + User registered and logged into the account
+  + User is in the dashboard and have access to user profile
+- **Trigger:** 
+  + User click on their user profile
+- **Primary Sequence:**
+1. User navigates to user profile editing page
+2. User click edit profile button
+3. Edit profile form pop up
+4. User can now editing whatever information they want to change
+5. User save changes that they made
+6. If the changes are valid, user profile is update
+7. Confirmation message that their profile had successfully updated
+- **Primary Postconditions:** 
+  + User profile had successfully updated with the changes
+  + User can now view their updated profile
+- **Alternate Sequence 1:** 
+1. User edit their profile
+2. User want to cancel their changes
+3. Click cancel button, and nothing will be change
+- **Alternate Sequence 2:** 
+1. User changes their information
+2. The changes are invalid
+3. Prompt the user to enter following the requirements
+4. The user can now re-enter the correct information
+___________________________________________________________________________________________________________________________________________
 
 
