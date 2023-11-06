@@ -5,9 +5,9 @@
 2. Register for An Account
 3. User Authentication via Email
 4. User Profile Management 
-5. requirement
-6. requirement
-7. requirement
+5. User Add Images to Note
+6. Search Note Functionality
+7. Logout of User Account
 8. requirement
 9. requirement
 10. requirement
@@ -73,6 +73,21 @@ ________________________________________________________________________________
 - **Alternate Sequence 2:** 
 1. Users image is too large to input into their text box
 2. Users image is too large to input into their text box
-
-
-
+___________________________________________________________________________________________________________________________________________
+6. Search Note Functionality (Andre Nassar)
+- **Pre-Condition:**
+  + The user is logged in into the system and the search functionality is accessible on the interface
+- **Trigger:** The user initiates the search function
+- **Primary Sequence:**
+1. The user selects the search function on the interface 
+2. The user enters a keyword or term in the search function
+3. The user enters the key phrase or word from the search function
+4.  The system processes the search request
+5. The system displays the results from the users input
+6. The user can review the results they received in a list format
+7. The user then clicks their desired result. 
+- **Primary Postconditions:** 
+  + User can now access the content they were searching for
+- **Alternate Sequence 1:** 
+1. If the user searches something that there isn't in the system the system will display a “no results” message
+2. Depending on the search the system may tell you to refine your search or keywords.
