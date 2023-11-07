@@ -6,9 +6,9 @@
 5. User Add Images to Note
 6. Search Note Functionality
 7. Logout of User Account
-8. requirement
-9. requirement
-10. requirement
+8. Create Note
+9. Edit Note
+10. Upload Note From File
 11. requirement
 12. requirement
 13. requirement
@@ -198,5 +198,75 @@
 - **Alternate Sequence 1:** 
 1. The user is not active for a certain period of time, so their session is expired prompting to log the user out
 
+### ***8. Create New Note (Evan Nishi)***
 
+- **Precondition:** 
+  + user is currently logged in 
+- **Trigger:** user hits the “create note” button
+- **Primary Sequence:**
+1. user is redirected to a “create note” page and prompted to enter in information
+2. user enters information into given fields
+3. user hit submit button
+4. system saves note to database
+- **Alternative Sequence 1, invalid note:**
+1. user attempts to save new note while required field is empty or invalid
+2. system warns user of field to be fixed  and reprompts user
+3. user fixes field and resubmits
+4. note is checked again and saved
+- **Primary Post Condition:**
+  * New note is created with given information and saved
+  * The new note has all required fields and all fields have valid values
 
+### **9. Edit Existing Note (Evan Nishi)**
+- **Precondition:**
+  + user is currently logged in
+  + note to be edited is already saved
+- **Trigger:** user hits edit button on note
+- **Primary Sequence:**
+1. system redirects user to edit page and prompts user to edit
+2. user makes needed changes
+3. user submits changes
+4. system overwrites old note
+- **Alternative Sequence 1, invalid changes:**
+1. user attempts to save edited note while required field is empty or invalid
+2. system warns user of field to be fixed  and reprompts user
+3. user fixes field and resubmits
+3. note is checked again and saved
+- **Alternative Sequence 2, no changes made:**
+1. user attempts to save note with no changes made
+2. system returns user to dashboard
+3. Upload Note From File (Evan Nishi)
+
+- **Precondition:**
+  + user is currently logged in
+
+- **Trigger:**user hits “upload” button on dashboard
+- **Primary Sequence:**
+1. system prompts user to upload file
+2. uploads file
+3. system autofills new note and takes user to new note creation
+4. user saves note
+
+- **Alternative Sequence 1, wrong file format:**
+1. system tells user that the file format is not accepted/that it is formatted incorrectly
+2. user uploads new file
+3. system autofills new note to be created with file contents
+4. system saves new file into note
+
+### **Upload Note From File (Evan Nishi)**
+
+- **Precondition:**
+ + user is currently logged in
+
+- **Trigger:** user hits “upload” button on dashboard
+- **Primary Sequence:**
+1. system prompts user to upload file
+2. uploads file
+3. system autofills new note and takes user to new note creation
+4. user saves note
+
+- **Alternative Sequence 1, wrong file format:**
+1. system tells user that the file format is not accepted/that it is formatted incorrectly
+2. user uploads new file
+3. system autofills new note to be created with file contents
+4. system saves new file into note
