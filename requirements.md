@@ -9,10 +9,10 @@
 8. Create Note
 9. Edit Note
 10. Upload Note From File
-11. requirement
-12. requirement
-13. requirement
-14. requirement
+11. Create a to-do list task
+12. Mark to-do list task as complete
+13. Delete to-do list task
+14. Delete a note
 
 ## Webpages Sketches
 - [**Requirement 1**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement1.png)
@@ -20,6 +20,9 @@
 - [**Requirement 3**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement3.png)
 - [**Requirement 4**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement4.png)
 - [**Requirements 5-7**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement5-7.png)
+- [**Requirement 11**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement11.png)
+- [**Requirements 12-13**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement12-13.png)
+- [**Requirement 14**](https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/sketches/Requirement14.png)
 - <using the syntax [](images/ui1.png) add images in a folder called images/ and place sketches of your webpages>
 
 ## Non-functional Requirements
@@ -253,7 +256,7 @@
 3. system autofills new note to be created with file contents
 4. system saves new file into note
 
-### **Upload Note From File (Evan Nishi)**
+### **10. **Upload Note From File (Evan Nishi)**
 
 - **Precondition:**
  + user is currently logged in
@@ -270,3 +273,83 @@
 2. user uploads new file
 3. system autofills new note to be created with file contents
 4. system saves new file into note
+
+### ***11. Create a to-do list task (Aadarsh Marahatta)***
+- **Pre-condition:** 
+  + The user is logged in and is on the main user interface page. 
+- **Trigger:** 
+  + The user selects “to-do list” button to move to their to-do list page
+- **Primary Sequence:**
+1. User is on the main page with their different notes.
+2. User selects the to-do list button.
+3. The to-do list page is displayed.
+4. Users add tasks to their list.
+5. To-do list is updated with the addition of the new tasks.
+6. System displays a small confirmation message.
+- **Primary Postconditions:** 
+  + User’s to-do list is successfully updated.
+    + Users can view their updated to-do list with tasks.
+- **Alternate Sequence 1:** 
+1. User attempts to add a task without writing any information.
+2. The system displays a message prompting the user to fill in required information.
+
+### ***12. Delete to-do list task (Aadarsh Marahatta)***
+- **Pre-condition:** 
+  + The user has logged in.
+  + The user is on their to-do list page.
+- **Trigger:** 
+  + The user selects the “delete” option.
+- **Primary Sequence:**
+1. The system prompts the user to select tasks to delete.
+2. User marks the tasks to delete.
+3. The system prompts the user to confirm the deletion of marked tasks.
+4. User confirms the deletion of the to-do list tasks.
+5. System deletes the tasks from the database.
+6. System displays a confirmation message saying the tasks are deleted.
+- **Primary Postconditions:** 
+  + Users tasks has been successfully deleted.
+    + The to do list page is updated without the tasks that were deleted.
+- **Alternate Sequence 1:** 
+1. The task selected have already been deleted.
+2. System displays a message saying the task is already deleted.
+3. Prompts the user to reload the page.
+
+### ***13. Mark to-do list task as complete (Aadarsh Marahatta)***
+- **Pre-condition:** 
+  + The user is logged in.
+  + The user is on their to-do list page. 
+- **Trigger:** 
+  + TThe user marks the checkbox next to the task.
+- **Primary Sequence:**
+1. User clicks the checkbox next to the task as complete.
+2. System marks the task as completed.
+3. System marks the check-box next to the task. 
+4. A small confirmation message is displayed.
+- **Primary Postconditions:** 
+  + User’s to-do list is successfully updated.
+    + The check box is filled and task is marked as completed.
+- **Alternate Sequence 1:** 
+1. The user clicks the checkbox next to the note, but the system fails to mark the note as complete. 
+2. The system displays an error message.
+3. The system prompts the user to reload the page.
+
+### ***14. Delete a note (Aadarsh Marahatta)***
+- **Pre-condition:** 
+  + The user has logged in.
+  + The note to be deleted has been created.
+- **Trigger:** 
+  + The user selects the “delete” option on the existing note.
+- **Primary Sequence:**
+1. User is on the main page with their different notes.
+2. User selects the to-do list button.
+3. The to-do list page is displayed.
+4. Users add tasks to their list.
+5. To-do list is updated with the addition of the new tasks.
+6. System displays a small confirmation message.
+- **Primary Postconditions:** 
+  + User’s note has been successfully deleted.
+    + Users notes page is updated and the note has been deleted.
+- **Alternate Sequence 1:** 
+1. The notes selected have already been deleted.
+2. System displays a message saying the note is already deleted.
+3. Prompts the user to reload the page.
