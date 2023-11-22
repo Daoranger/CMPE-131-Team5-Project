@@ -6,6 +6,8 @@ from .forms import CreateAccountForm
 from app import myapp_obj
 from app.models import User
 from app import db
+import re 
+
 
 @myapp_obj.route("/")
 @myapp_obj.route("/index.html")
@@ -36,18 +38,18 @@ def login():
 @myapp_obj.route("/createaccount", methods=['GET', 'POST'])
 def createaccount():
     form = CreateAccountForm()
-    print(form.validate_on_submit())
+    
     if form.validate_on_submit():
-            print('do something')
-            print(f'this is the username of the user {form.username.data}')
-            print(f'this is the password of the user {form.password.data}')
-            u = User(username=form.username.data, password=form.password.data,
+        print('do something')
+        print(f'this is the username of the user {form.username.data}')
+        print(f'this is the password of the user {form.password.data}')
+        u = User(username=form.username.data, password=form.password.data,
                      email=form.email.data)
-            db.session.add(u)
-            db.session.commit()
-            return redirect('/')
-
+        db.session.add(u)
+        db.session.commit()
+        return redirect('/')
     return render_template('create_account.html', form=form)
+
 @myapp_obj.route("/members/<string:name>/")
 def getMember(name):
     return escape(name)
