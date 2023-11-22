@@ -39,6 +39,16 @@ def login():
 def createaccount():
     form = CreateAccountForm()
     
+    # Check if the entered email addresses matched?
+    if form.email.data != form.email_confirm.data:
+        flash('Error: Email addresses do not match', 'error')
+        return render_template('create_account.html', form=form)
+        
+    # Check if the entered password matched?
+    if form.password.data != form.password_confirm.data:
+        flash('Error: Password do not match', 'error')
+        return render_template('create_account.html', form=form)
+    
     if form.validate_on_submit():
         print('do something')
         print(f'this is the username of the user {form.username.data}')
@@ -48,6 +58,7 @@ def createaccount():
         db.session.add(u)
         db.session.commit()
         return redirect('/')
+        
     return render_template('create_account.html', form=form)
 
 @myapp_obj.route("/members/<string:name>/")
