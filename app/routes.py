@@ -4,14 +4,17 @@ from flask import flash
 from .forms import LoginForm
 from .forms import CreateAccountForm
 from app import myapp_obj
-from app.data.models import User
+
+
 from app import db
 
 from flask_login import UserMixin
-from data.dao import *
+
+from app.dao import *
+from app.models import User
 
 @myapp_obj.route("/")
-@myapp_obj.route("/index.html")
+@myapp_obj.route("/index.html/")
 def index():
     name = 'Carlos'
     books = [ {'author': 'authorname1',
@@ -20,7 +23,7 @@ def index():
               'book': 'bookname2'}]
     return render_template('hello.html',name=name, books=books)
 
-@myapp_obj.route("/hello")
+@myapp_obj.route("/hello/")
 def hello():
     return "Hello World!"
 
@@ -30,13 +33,16 @@ def login():
     if form.validate_on_submit():
         print(f'Here we print to terminal the input {form.username.data} and {form.password.data}')
         flash(f'Here we use flash to HTML with the input {form.username.data} and {form.password.data}')
-        found_user = get_user(form.username.data) #User.query.filter_by(username=form.username.data).first()
+        found_user = get_user(username=form.username.data) #User.query.filter_by(username=form.username.data).first()
         print(found_user)
-        if(found_user == None or found_user.check_password(form.password.data)):
-             print("no user found or incorrect password")
+        if(found_user == None):
+             print("no user found")
              #deal with it here
+        elif(found_user.check_password(password=form.password.data)):
+             print("incorrect password")
         else:
             print("successful login!")
+        #print(form.password.data)
         '''
         return/do stuff here
         '''
@@ -52,6 +58,7 @@ def createaccount():
             print(f'this is the username of the user {form.username.data}')
             print(f'this is the password of the user {form.password.data}')
 
+            #TODO: the checking for unique doesn't work here 
             if(create_user(username=form.username.data, password=form.password.data,
                      email=form.email.data)):
                  print('user created')

@@ -1,4 +1,4 @@
-from models import User
+from app.models import User
 from app import db
 from sqlalchemy import exc
 
@@ -11,7 +11,7 @@ def get_user(username):
         user (Models.User) or None: If there is a user with the username queried then the User object will be returned.
         If not, None will be returned.
     '''
-    return(User.query.filter_by(username).first())
+    return(User.query.filter_by(username=username).first())
 
 def create_user(username, password, email):
     '''
@@ -24,7 +24,7 @@ def create_user(username, password, email):
     throws (IntegrityError): if username and email aren't unique this error is 
     '''
     try:
-        new_user = User(username, password, email)
+        new_user = User(username=username, password=password, email=email)
         db.session.add(new_user)
         db.session.commit()
         return True
