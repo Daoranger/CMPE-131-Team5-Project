@@ -1,7 +1,15 @@
 {% extends "base.html"%}
 
 {% block content %}
-<h1>Sign In</h1>
+	{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for msg in messages %}
+					
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+		
+<h1>Create Your Account</h1>
 <form action="" method="POST" novalidate>
     {{form.hidden_tag()}}
     <p> {{form.name.label}} <br>
@@ -9,6 +17,9 @@
 
     <p> {{form.email.label}} <br>
        {{form.email(size=32)}}</p>
+	
+	<p> {{form.email_confirm.label}} <br>
+       {{form.email_confirm(size=32)}}</p>
 
     <p> {{form.username.label}} <br>
        {{form.username(size=32)}}</p>
@@ -16,8 +27,8 @@
     <p> {{form.password.label}} <br>
        {{form.password(size=32)}}</p>
 
-    <p> {{form.confirm.label}} <br>
-       {{form.confirm(size=32)}}</p>
+    <p> {{form.password_confirm.label}} <br>
+       {{form.password_confirm(size=32)}}</p>
 
     <p>{{form.submit()}}</p>
 </form>
