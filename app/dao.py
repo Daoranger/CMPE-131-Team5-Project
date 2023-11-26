@@ -31,6 +31,14 @@ def create_user(username, password, email):
     except exc.IntegrityError:
         db.session.rollback()
         return False
+        
+def get_user_by_id(user_id):
+    try:
+        user = User.query.get(int(user_id))
+        return user
+    except Exception as e:
+        print(f"Error getting user by ID: {e}")
+        return None
     
 #TODO: def create_note(): 
 #TODO: def get_note():

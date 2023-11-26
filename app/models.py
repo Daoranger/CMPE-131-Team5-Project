@@ -13,13 +13,12 @@ class User(db.Model):
     #TODO: Result in FALSE even when the passwords are the same, I added the hashed_password to help debug. 
     #There might be problem with the hash it self (string cant compare to hash)
     def check_password(self, password):
-        hashed_password = generate_password_hash(password)
         print(f"Stored hashed password: {self.password}")
         result = check_password_hash(self.password, password)
         print(f"Password check result: {result}")
-        print(f"Input password: {hashed_password}")
+        print(f"Input password: {password}")
         
-        return check_password_hash(self.password, hashed_password)
+        return check_password_hash(self.password, password)
 
     def __repr__(self):
         return f'<user {self.id}: {self.username}>'
