@@ -1,17 +1,10 @@
-from flask import render_template
-from flask import redirect, url_for
-from flask import flash
-from .forms import LoginForm
-from .forms import CreateAccountForm
-from app import myapp_obj
-from flask import session
+from flask import redirect, url_for, render_template, flash, session
+from .forms import LoginForm, CreateNoteForm, CreateAccountForm
 import re #from Python "Regular Expression Operations"
 from werkzeug.security import generate_password_hash, check_password_hash
-from datetime import timedelta
+from datetime import timedelta, datetime
 
-from app import db
-
-from flask_login import UserMixin
+from app import db, myapp_obj
 
 from app.dao import *
 from app.models import User
@@ -44,7 +37,6 @@ def dashboard():
 @myapp_obj.route("/login", methods=['GET', 'POST'])
 def login():
     form = LoginForm()
-    
     if form.validate_on_submit():
         flash(f'Here we use flash to HTML with the input {form.username.data} and {form.password.data}')
         found_user = get_user(username=form.username.data) #User.query.filter_by(username=form.username.data).first()
@@ -110,7 +102,7 @@ def createaccount():
                 return render_template('create_account.html', form=form)
            
            
-           #TODO: the checking for unique doesn't work here 
+           #TODO: the checking for unique doesn't work here, we need to migrate the db to new models
             if(create_user(username=form.username.data, password=hashed_password,
                      email=form.email.data)):
                 session['user_id'] = get_user(username=form.username.data).id
@@ -130,7 +122,36 @@ def logout():
 #@myapp_obj.route("/createnote", methods = ['GET', 'POST'])
 #def createnote():
      
+@myapp_obj.route("/createnote", methods = ['GET', 'POST'])
+def createnote():
+    if 'user_id' not in session:
+        flash('please log in before trying to create a note')
+        return redirect('/login')
+    else:
+        print(session['user_id'])
+        form = CreateNoteForm()
+        print(form.validate_on_submit())
+        if form.validate_on_submit():
+            print('creating new note')
+            create_note(title=form.title.data, date=form.date.data, text=form.text.data)
+        return render_template('create_note.html', form=form)
 
+
+@myapp_obj.route("/edit/<string:noteid>/")
+def edit_note():
+     if 'user_id' not in session:
+        flash('please log in before trying to edit a note')
+        return redirect('/login')
+     else:
+         print('')
+     return("")
+
+@myapp_obj.route("/delte/<string:noteid>/")
+def delete_note():
+    if 'user_id' not in session:
+        flash('please log in before trying to delete a note')
+        return redirect('/login')
+    
 '''
 @myapp_obj.route("/members/<string:name>/")
 def getMember(name):

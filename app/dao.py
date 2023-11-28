@@ -1,6 +1,7 @@
-from app.models import User
+from app.models import User, Note
 from app import db
 from sqlalchemy import exc
+from flask import session
 
 def get_user(username):
     '''
@@ -39,7 +40,31 @@ def get_user_by_id(user_id):
     except Exception as e:
         print(f"Error getting user by ID: {e}")
         return None
-    
+
 #TODO: def create_note(): 
+def create_note(date, title, text):
+    try:
+        user_id = session['user_id']
+        new_note = Note(date=date, title=title, text=text, user_id=user_id)
+        db.session.add(new_note)
+        db.session.commit()
+        return True
+    except Exception as E:
+        print(E)
+        return False
+    
 #TODO: def get_note():
 
+def delete_note(note_id):
+    del_note = Note.query.get(note_id)
+    if del_note != None:
+        try:
+            db.session.delete(del_note)
+            db.session.commit()
+            return True
+        except Exception as E:
+            print(E)
+            return False
+    else:
+        print('Note not found')
+        return False

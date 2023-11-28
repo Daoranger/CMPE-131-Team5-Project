@@ -1,6 +1,8 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, DateTimeField, TextAreaField
 from wtforms.validators import DataRequired, Email, EqualTo, ValidationError
+from datetime import datetime
+
 
 class LoginForm(FlaskForm):
     username = StringField('Userename', validators=[DataRequired()])
@@ -16,3 +18,9 @@ class CreateAccountForm(FlaskForm):
     password = PasswordField('Choose Password', validators=[DataRequired(), EqualTo('password_confirm', message='Passwords must match')])
     password_confirm = PasswordField('Confirm Password')
     submit = SubmitField('Create Account')
+
+class CreateNoteForm(FlaskForm):
+    title = StringField('Note title', validators=[DataRequired()])
+    date = DateTimeField('Date', validators=[DataRequired()], default=datetime.now())
+    body = TextAreaField('Note', validators=[DataRequired()])
+    submit = SubmitField('Create Note', validators=[DataRequired()])
