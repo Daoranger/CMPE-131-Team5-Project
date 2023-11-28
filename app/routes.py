@@ -5,10 +5,10 @@ from .forms import LoginForm
 from .forms import CreateAccountForm
 from app import myapp_obj
 from flask import session
+from flask import request
 import re #from Python "Regular Expression Operations"
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import timedelta
-
 from app import db
 
 from flask_login import UserMixin
@@ -43,6 +43,11 @@ def dashboard():
 
 @myapp_obj.route("/login", methods=['GET', 'POST'])
 def login():
+
+    if 'user_id' in session:
+        flash('You are already logged in', 'info')
+        return redirect('/dashboard')
+        
     form = LoginForm()
     
     if form.validate_on_submit():

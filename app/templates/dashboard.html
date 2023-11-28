@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-        <h1>DASHBOARD {{name}} !</h1>
+        <h1>DASHBOARD - {{ username}} !</h1>
         {% for i in books %}
         <ul>
             <li><p>{{i.author}}: {{i.book}}</p></li>
