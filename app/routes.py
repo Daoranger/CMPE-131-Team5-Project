@@ -1,10 +1,12 @@
-from flask import redirect, url_for, render_template, flash, session, jsonify
-from .forms import LoginForm, CreateNoteForm, CreateAccountForm, EditNoteForm
-import re #from Python "Regular Expression Operations"
+from flask import render_template, flash, jsonify, redirect, url_for
+from .forms import CreateAccountForm, CreateNoteForm, EditNoteForm, LoginForm
+from app import myapp_obj
+from flask import session
+import re
 from werkzeug.security import generate_password_hash, check_password_hash
-from datetime import timedelta, datetime
+from datetime import timedelta
+from app import db
 
-from app import db, myapp_obj
 
 from app.dao import *
 from app.models import User
@@ -36,6 +38,11 @@ def dashboard():
 
 @myapp_obj.route("/login", methods=['GET', 'POST'])
 def login():
+
+    if 'user_id' in session:
+        flash('You are already logged in', 'info')
+        return redirect('/dashboard')
+        
     form = LoginForm()
     if form.validate_on_submit():
         #flash(f'Here we use flash to HTML with the input {form.username.data} and {form.password.data}')
