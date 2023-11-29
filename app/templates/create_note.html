@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+
+{% block content %}
+	{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for msg in messages %}
+					
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+		
+<h1>Create New Note</h1>
+<form action="" method="POST" novalidate>
+    {{form.hidden_tag()}}
+    <p> {{form.title.label}} <br>
+       {{form.title(size=100)}}</p>
+	<p>
+		{{form.date.label}}<br>
+		{{form.date}}
+	</p>
+	<p>
+		{{form.text.label}}<br>
+		{{form.text(rows=10, cols=100)}}
+	</p>
+	<p>{{form.submit()}}</p>
+</form>
+{% endblock %}
