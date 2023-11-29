@@ -22,9 +22,11 @@ class User(db.Model):
 
     def __repr__(self):
         return f'<user {self.id}: {self.username}>'
-
-
+    
+    
 class Note(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.DateTime)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable = False)
+    title = db.Column(db.String(100))
+    text = db.Column(db.Text)
