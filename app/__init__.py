@@ -23,7 +23,7 @@ db = SQLAlchemy(myapp_obj)
 
 with myapp_obj.app_context():
     from app.models import User
-    from app.todo import todo
+    from app.todo import Todo
     db.create_all()
 
 from app import routes

@@ -2,6 +2,7 @@ from flask import Flask, flash,render_template,redirect,request,redirect,session
 from flask_sqlalchemy import SQLAlchemy
 from app import db
 from app import myapp_obj
+from app import routes
 
 class Todo(db.Model):
     task_id = db.Column(db.Integer,primary_key=True)
@@ -10,8 +11,11 @@ class Todo(db.Model):
 
 @myapp_obj.route('/todo')
 def home():
+    if 'user_id' not in session:
+        flash('Please login before viewing the to-do list')
+        return redirect('/login')
     todo_list = Todo.query.all()
-    return render_template('base.html', todo_list = todo_list)
+    return render_template('todo.html', todo_list = todo_list)
 
 @myapp_obj.route('/add', methods=['POST'])
 def add():
@@ -31,7 +35,7 @@ def add():
 @myapp_obj.route('/update/<int:todo_id>')
 def update(todo_id):
     if 'user_id' not in session:
-        flash('Please log in before updating a task')
+        flash('Please login before updating a task')
         return redirect('/login')
     todo = Todo.query.get(todo_id)
     todo.complete = not todo.complete
@@ -42,7 +46,7 @@ def update(todo_id):
 @myapp_obj.route('/delete/<int:todo_id>')
 def delete(todo_id):
     if 'user_id' not in session:
-        flash('Please log in before deleting a task')
+        flash('Please login before deleting a task')
         return redirect('/login')
     todo = Todo.query.get(todo_id)
     db.session.delete(todo)
@@ -52,7 +56,7 @@ def delete(todo_id):
 @myapp_obj.route('/delete_all', methods=['POST'])
 def delete_all():
     if 'user_id' not in session:
-        flash('Please log in before reseting todo list')
+        flash('Please login before deleting all tasks')
         return redirect('/login')
     Todo.query.delete()
     db.session.commit()
