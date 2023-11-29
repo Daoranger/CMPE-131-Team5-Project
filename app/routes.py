@@ -1,5 +1,5 @@
-from flask import redirect, url_for, render_template, flash, session
-from .forms import LoginForm, CreateNoteForm, CreateAccountForm
+from flask import redirect, url_for, render_template, flash, session, jsonify
+from .forms import LoginForm, CreateNoteForm, CreateAccountForm, EditNoteForm
 import re #from Python "Regular Expression Operations"
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import timedelta, datetime
@@ -29,7 +29,7 @@ def dashboard():
         # User is logged in, get user information
         user_id = session['user_id']
         user = get_user_by_id(user_id)  # Implement this function in DAO
-        return render_template('dashboard.html', user=user)
+        return render_template('dashboard.html', name=user.username, notes=user.notes) #notes=user.notes
     else:
         flash('You are not logged in', 'error')
         return redirect(url_for('login'))   
@@ -38,7 +38,7 @@ def dashboard():
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        flash(f'Here we use flash to HTML with the input {form.username.data} and {form.password.data}')
+        #flash(f'Here we use flash to HTML with the input {form.username.data} and {form.password.data}')
         found_user = get_user(username=form.username.data) #User.query.filter_by(username=form.username.data).first()
         print(found_user)
         
@@ -82,10 +82,6 @@ def createaccount():
         
     #Submit and if valid
     if form.validate_on_submit():
-            print('do something')
-            print(f'this is the username of the user {form.username.data}')
-            print(f'this is the password of the user {form.password.data}')
-
             # Hash the password before storing it
             hashed_password = generate_password_hash(form.password.data)
         
@@ -134,23 +130,39 @@ def createnote():
         if form.validate_on_submit():
             print('creating new note')
             create_note(title=form.title.data, date=form.date.data, text=form.text.data)
+            return redirect('/dashboard')
         return render_template('create_note.html', form=form)
 
-
-@myapp_obj.route("/edit/<string:noteid>/")
-def edit_note():
+@myapp_obj.route("/edit/<string:noteid>/", methods =['GET', 'POST'])
+def edit_note_route(noteid):
      if 'user_id' not in session:
         flash('please log in before trying to edit a note')
         return redirect('/login')
      else:
-         print('')
-     return("")
+        curr_note = Note.query.get(int(noteid))
+        form = EditNoteForm(title=curr_note.title, date=curr_note.date, text=curr_note.text)
+        if form.validate_on_submit():  
+            print('form.title.data:', form.title.data )
+            if(edit_note(note_id=noteid, date=form.date.data, title=form.title.data, text=form.text.data)):
+                print('edited')
+                flash('note sucessfully edited')
+                return redirect('/dashboard')
+     return render_template('edit_note.html', form=form)
 
-@myapp_obj.route("/delte/<string:noteid>/")
-def delete_note():
+@myapp_obj.route("/delete/<string:noteid>/")
+def delete_note_route(noteid):
+    print("hello")
     if 'user_id' not in session:
-        flash('please log in before trying to delete a note')
-        return redirect('/login')
+        return jsonify({'success': False, 'message': 'user not logged in'})
+    else:
+        if(delete_note(noteid)):
+            print('note successfully deleted')
+            flash('note successfully deleted')
+            return jsonify({'success': True})
+        else:
+            print('error, note not deleted')
+            flash('error, note not deleted')
+            return jsonify({'success': False})
     
 '''
 @myapp_obj.route("/members/<string:name>/")

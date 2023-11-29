@@ -19,8 +19,9 @@
 		{{form.date}}
 	</p>
 	<p>
-		{{form.body.label}}<br>
-		{{form.body(rows=10, cols=100)}}
+		{{form.text.label}}<br>
+		{{form.text(rows=10, cols=100)}}
 	</p>
+	<p>{{form.submit()}}</p>
 </form>
 {% endblock %}

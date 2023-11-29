@@ -2,7 +2,6 @@ from app.models import User, Note
 from app import db
 from sqlalchemy import exc
 from flask import session
-
 def get_user(username):
     '''
     parameters: 
@@ -53,7 +52,21 @@ def create_note(date, title, text):
         print(E)
         return False
     
-#TODO: def get_note():
+def edit_note(note_id, date, title, text):
+    try:
+        edited_note = Note.query.get(int(note_id))
+        if (edited_note != None):
+            edited_note.date = date
+            edited_note.title = title
+            edited_note.text = text
+            db.session.commit()
+            print('hello, we did it')
+            return True 
+        else:
+            return False
+    except Exception as E:
+        print(E)
+        return False
 
 def delete_note(note_id):
     del_note = Note.query.get(note_id)

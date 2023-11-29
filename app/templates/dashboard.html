@@ -1,10 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-        <h1>DASHBOARD {{name}} !</h1>
-        {% for i in books %}
+        <script>
+            function deleteNote(elem, id){
+                console.log('hello from dashboard')
+                elem.parentElement.remove();
+                fetch("/delete/" + id + "/")
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                    })
+                    .catch(error =>{
+                        console.error('something up')
+                    })
+            }
+        </script>
+        <h1>Welcome {{name}} !</h1>
+        <a href="/createnote">Create Note</a>
+        {% for i in notes %}
         <ul>
-            <li><p>{{i.author}}: {{i.book}}</p></li>
+            <li><p>{{i.title}}: {{i.date}}</p> <button onclick="window.location.href='edit/{{(i.id)}}'">Edit</button><button onclick="deleteNote(this, '{{(i.id)}}')">Delete</button> </li>
         </ul>
         {% endfor %}
 {% endblock %}

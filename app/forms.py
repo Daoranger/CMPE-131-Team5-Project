@@ -22,5 +22,12 @@ class CreateAccountForm(FlaskForm):
 class CreateNoteForm(FlaskForm):
     title = StringField('Note title', validators=[DataRequired()])
     date = DateTimeField('Date', validators=[DataRequired()], default=datetime.now())
-    body = TextAreaField('Note', validators=[DataRequired()])
+    text = TextAreaField('Note', validators=[DataRequired()])
     submit = SubmitField('Create Note', validators=[DataRequired()])
+
+class EditNoteForm(FlaskForm):
+    title = StringField('Note title', validators=[DataRequired()])
+    date = DateTimeField('Date', validators=[DataRequired()])
+    text = TextAreaField('Note', validators=[DataRequired()])
+    submit = SubmitField('Edit Note', validators=[DataRequired()])
+
