@@ -16,8 +16,6 @@ myapp_obj.config.from_mapping(
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 )
 
-myapp_obj.config['SQLALCHEMY_DATABASE_URI']='sqlite:///db.sqlite'
-myapp_obj.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(myapp_obj)
 
