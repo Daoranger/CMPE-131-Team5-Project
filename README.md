@@ -19,11 +19,11 @@ Noted! is a website designed to help individuals create notes and a to-do list f
 
 ### Steps to Run the Website
 1. Create a clone repo of our website
-   * Install all the librabries including python3, flask
-   * Create a virtual envieronment and installed all the reqeuirement from our requirement.txt file
+   * Install all the librabries including python3, flask, etc
+   * Create a virtual envieronment and installed all the requirements from our requirements.txt file
 2. Open your choice of open source operating system (recommended Ubuntu)
    * CD into the CMPE-131-Team5-Project directory
-   * Run the website by typy: python3 run.py (note if it is not working that mean you haven't install all the requirements)
+   * Run the website by typing: python3 run.py (note if it is not working that mean you haven't install all the requirements)
    * The system will give you the link to our website
    * Use any web browser (recommended Chrome) to launch the website using the link
 3. Create your first account and explore!
