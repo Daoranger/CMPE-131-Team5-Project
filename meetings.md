@@ -58,13 +58,8 @@
 - **Attendance**: Hoang, Andre
 - - **Progress**:
   * Help Andrew run the website and installing requirements
- 
-### 2023-11-26 from 21:00 to 21:30
-- **Attendance**: Hoang, Andre
-- - **Progress**:
-  * Help Andrew run the website and installing requirements
 
-### 2023-11-27 from 21:00 to 21:30
+### 2023-11-26 from 21:00 to 21:30
 - **Attendance**: Hoang, Evan, Aadarsh (Group Chat)
 - - **Progress**:
   * Hoang finished authentication pages, just need to fix up some stuff
