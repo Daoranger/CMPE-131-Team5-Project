@@ -31,8 +31,18 @@ def create_user(username, password, email):
     except exc.IntegrityError:
         db.session.rollback()
         return False
-        
+
+#Get user id
+
 def get_user_by_id(user_id):
+    '''
+    parameters: 
+        username (int): the user id to be queried
+
+    returns: 
+        user_id 
+        if can't return user id there is a problem with getting the user ID so throw error
+    '''
     try:
         user = User.query.get(int(user_id))
         return user
