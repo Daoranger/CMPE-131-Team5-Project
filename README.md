@@ -39,6 +39,10 @@ Noted! is a website designed to help individuals create notes and a to-do list f
   * Proposing Requirements
 
 ### Snapshots
+![Uploading Screenshot 2023-11-29 at 9.00.42 PM.png…]()
+
+
+
 
 ### References
 [1] https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login
