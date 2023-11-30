@@ -39,6 +39,7 @@ Noted! is a website designed to help individuals create notes and a to-do list f
   * Proposing Requirements
 
 ### Snapshots
+<img width="1422" alt="Screenshot 2023-11-29 at 8 59 44 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/assets/35211839/69f433bb-0c5b-4b2d-9048-6a52f2b78feb">
 
 
 
