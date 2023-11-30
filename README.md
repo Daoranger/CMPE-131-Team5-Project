@@ -8,7 +8,15 @@ Noted! is a website designed to help individuals create notes and a to-do list f
 - [Contribution](#contribution)
 - [Snapshots](#snapshots)
 - [References](#references)
-  
+
+### Intended Usage (Purposes)
+
+### Goals
+
+### Functionality
+
+### User Operations
+
 ### Steps to Run the Website
 1. Create a clone repo of our website
    * Install all the librabries including python3, flask
