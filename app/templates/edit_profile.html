@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <!-- Add any additional CSS styles or links to Bootstrap if needed -->
+</head>
+<body>
+
+<div class="container">
+    <h2>Edit Profile</h2>
+    
+    <!-- Display flash messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Form for editing username -->
+    <form method="post" action="{{ url_for('edit_profile') }}">
+        <label for="new_username">New Username:</label>
+        <input type="text" id="new_username" name="new_username" required>
+        <button type="submit" name="edit_username">Update Username</button>
+    </form>
+
+    <!-- Form for editing password -->
+    <form method="post" action="{{ url_for('edit_profile') }}">
+        <label for="new_password">New Password:</label>
+        <input type="password" id="new_password" name="new_password" required>
+        <button type="submit" name="edit_password">Update Password</button>
+    </form>
+
+    <!-- Add additional styling or form elements as needed -->
+
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</div>
+
+</body>
+</html>
