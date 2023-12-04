@@ -11,6 +11,49 @@ from app import db
 from app.dao import *
 from app.models import User
 
+#added by Hoang 
+import json
+
+import requests
+from authlib.integrations.flask_client import OAuth
+from flask import Flask, abort, redirect, render_template, session, url_for
+#added by Hoang
+
+@myapp_obj.route("/home")
+def home():
+    return render_template("home.html", session=session.get("user"),
+                           pretty=json.dumps(session.get("user"), indent=4))
+
+@myapp_obj.route("/signin-google")
+def googleCallback():
+    # fetch access token and id token using authorization code
+    token = oauth.myApp.authorize_access_token()
+
+    # google people API - https://developers.google.com/people/api/rest/v1/people/get
+    # Google OAuth 2.0 playground - https://developers.google.com/oauthplayground
+    # make sure you enable the Google People API in the Google Developers console under "Enabled APIs & services" section
+
+    # fetch user data with access token
+    personDataUrl = "https://people.googleapis.com/v1/people/me?personFields=genders,birthdays"
+    personData = requests.get(personDataUrl, headers={
+        "Authorization": f"Bearer {token['access_token']}"
+    }).json()
+    token["personData"] = personData
+    # set complete user information in the session
+    session["user_id"] = token
+    return redirect(url_for("home"))
+
+
+@myapp_obj.route("/google-login")
+def googleLogin():
+    if "user_id" in session:
+        abort(404)
+    return oauth.myApp.authorize_redirect(redirect_uri=url_for("googleCallback", _external=True))
+
+###################################################
+
+
+
 @myapp_obj.route("/")
 @myapp_obj.route("/index.html/")
 def index():
@@ -182,4 +225,3 @@ def delete_note_route(noteid):
 def getMember(name):
     return escape(name)
 '''
-
