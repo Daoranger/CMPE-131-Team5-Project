@@ -32,13 +32,15 @@ def dashboard():
         user_id = session['user_id']
         user = get_user_by_id(user_id)  # Implement this function in DAO
         return render_template('dashboard.html', name=user.username, notes=user.notes) #notes=user.notes
+    #If not log in can't acess dashboard
     else:
         flash('You are not logged in', 'error')
         return redirect(url_for('login'))   
 
 @myapp_obj.route("/login", methods=['GET', 'POST'])
 def login():
-
+    
+    #Check if there is already a user in session
     if 'user_id' in session:
         flash('You are already logged in', 'info')
         return redirect('/dashboard')
@@ -49,15 +51,18 @@ def login():
         found_user = get_user(username=form.username.data) #User.query.filter_by(username=form.username.data).first()
         print(found_user)
         
+        #if no account with this username in the database, throw error
         if(found_user == None):
             print("no user found")
             #deal with it here
             flash('Error: No user found with this username', 'error')
+        #if username found but correct doesn't match throw incorrent password
         elif (not found_user.check_password(password=form.password.data)):
              print("incorrect password")
              flash('Error: Incorrect password', 'error')
+        #if password matched username put the user into session and login and redirect to user dashboard
         else:
-            session['user_id'] = found_user.id
+            session['user_id'] = found_user.id  #storing the user ID of the found_user in the session under the key 'user_id'
             flash('Successful login!', 'success')
             return redirect('/dashboard')
         
@@ -82,7 +87,7 @@ def createaccount():
         flash('Error: Password do not match', 'error')
         return render_template('create_account.html', form=form)
                 
-    # Additional validations
+    #Check if Fullname only contain letters
     if form.name.data and (not isinstance(form.name.data, str) or not re.match("^[A-Za-z]*$", form.name.data)):
         flash('Error: Full name can only contain letters', 'error')
         return render_template('create_account.html', form=form)
@@ -119,6 +124,7 @@ def createaccount():
 
 @myapp_obj.route("/logout")
 def logout():
+    #Pop the user out of their session, redirect back to login
     session.pop('user_id', None)
     flash('You have been logged out', 'success')
     return redirect(url_for('login'))
