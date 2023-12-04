@@ -6,6 +6,7 @@ import re
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import timedelta
 from app import db
+from flask import request
 
 
 from app.dao import *
@@ -176,6 +177,50 @@ def delete_note_route(noteid):
             print('error, note not deleted')
             flash('error, note not deleted')
             return jsonify({'success': False})
+            
+@myapp_obj.route("/edit_profile", methods=['GET', 'POST'])
+def edit_profile():
+    # Check if the user is logged in
+    if 'user_id' not in session:
+        flash('Please log in before trying to edit your profile')
+        return redirect('/login')
+
+    # Get the current user
+    user_id = session['user_id']
+    user = get_user_by_id(user_id)  # Implement this function in DAO
+
+    # Handle the form for editing username and password
+    if request.method == 'POST':
+        # Check if the form is for editing the username
+        if 'edit_username' in request.form:
+            new_username = request.form['new_username']
+
+            # Check if the new username is valid (you can add additional checks)
+            if not new_username:
+                flash('Error: Username cannot be empty', 'error')
+            else:
+                # Update the username in the database
+                user.username = new_username
+                db.session.commit()
+                flash('Username updated successfully!', 'success')
+                return redirect('/dashboard')
+
+        # Check if the form is for editing the password
+        elif 'edit_password' in request.form:
+            new_password = request.form['new_password']
+
+            # Check if the new password is valid (you can add additional checks)
+            if not new_password:
+                flash('Error: Password cannot be empty', 'error')
+            else:
+                # Hash the new password and update it in the database
+                user.password = generate_password_hash(new_password)
+                db.session.commit()
+                flash('Password updated successfully!', 'success')
+                return redirect('/dashboard')
+
+    # Render the edit profile page with the user's information
+    return render_template('edit_profile.html', user=user)
     
 '''
 @myapp_obj.route("/members/<string:name>/")
