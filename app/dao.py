@@ -91,3 +91,6 @@ def delete_note(note_id):
     else:
         print('Note not found')
         return False
+
+def get_note(note_id):
+    return Note.query.get(note_id)

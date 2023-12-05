@@ -10,8 +10,6 @@ class User(db.Model):
     def set_password(self, password):
         self.password = generate_password_hash(password)
 
-    #TODO: Result in FALSE even when the passwords are the same, I added the hashed_password to help debug. 
-    #There might be problem with the hash it self (string cant compare to hash)
     def check_password(self, password):
         print(f"Stored hashed password: {self.password}")
         result = check_password_hash(self.password, password)

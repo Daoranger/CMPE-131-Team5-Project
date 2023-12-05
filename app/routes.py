@@ -177,7 +177,16 @@ def delete_note_route(noteid):
             print('error, note not deleted')
             flash('error, note not deleted')
             return jsonify({'success': False})
-            
+        
+@myapp_obj.route("/view/<string:noteid>", methods=['GET', 'POST'])
+def view_note(noteid):
+    if 'user_id' not in session:
+        flash('Please log in before trying to view notes')
+        return redirect('/login')
+    note = get_note(note_id=noteid)
+    if note != None:
+        return render_template('view_note.html', note=note)
+    
 @myapp_obj.route("/edit_profile", methods=['GET', 'POST'])
 def edit_profile():
     # Check if the user is logged in
@@ -189,7 +198,7 @@ def edit_profile():
     user_id = session['user_id']
     user = get_user_by_id(user_id)  # Implement this function in DAO
 
-    # Handle the form for editing username and password
+    # Handle the form for editing username an<string:name>d password
     if request.method == 'POST':
         # Check if the form is for editing the username
         if 'edit_username' in request.form:

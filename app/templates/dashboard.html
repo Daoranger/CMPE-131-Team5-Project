@@ -19,7 +19,7 @@
         <a href="/createnote">Create Note</a>
         {% for i in notes %}
         <ul>
-            <li><p>{{i.title}}: {{i.date}}</p> <button onclick="window.location.href='edit/{{(i.id)}}'">Edit</button><button onclick="deleteNote(this, '{{(i.id)}}')">Delete</button> </li>
+            <li><p>{{i.title}}: {{i.date}}</p><button onclick="window.location.href='view/{{(i.id)}}'">View</button> <button onclick="window.location.href='edit/{{(i.id)}}'">Edit</button><button onclick="deleteNote(this, '{{(i.id)}}')">Delete</button> </li>
         </ul>
         {% endfor %}
 {% endblock %}
