@@ -30,7 +30,7 @@ Noted! is a website designed to help individuals create notes and a to-do list f
 
 ### Contribution
 * Hoang worked on:
-  * Login, Register/Create an Account, Logout, Contact Us (user send a gmail to the developer gmail)
+  * Login, Register/Create an Account, Logout, Edit User Profile (username OR password), Contact Us (user send a gmail to the developer gmail)
 * Evan worked on:
   * Note feature (create/edit/delete), Database functions
 * Aadarsh worked on:
