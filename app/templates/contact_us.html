@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Add any additional CSS styles or links to Bootstrap if needed -->
+</head>
+<body>
+
+<div class="container">
+    <h2>Contact Us</h2>
+
+    <!-- Display flash messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Form for contacting us -->
+    <form method="post" action="{{ url_for('contact_us') }}">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <!-- Button to submit the contact form -->
+        <button type="submit" name="submit_contact">Submit</button>
+    </form>
+
+    <!-- Add additional styling or form elements as needed -->
+
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</div>
+
+</body>
+</html>
