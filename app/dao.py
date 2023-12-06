@@ -94,3 +94,12 @@ def delete_note(note_id):
 
 def get_note(note_id):
     return Note.query.get(note_id)
+    
+def search_notes_by_title(user_id, search_term):
+    # Assuming you have a 'notes' relationship in your User model
+    user_notes = User.query.get(user_id).notes
+
+    # Perform the search using SQLAlchemy's like operator
+    search_results = [note for note in user_notes if search_term.lower() in note.title.lower()]
+
+    return search_results

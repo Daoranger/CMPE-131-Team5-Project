@@ -260,3 +260,22 @@ def contact_us():
 
     return render_template('contact_us.html')
 
+@myapp_obj.route("/search", methods=['GET', 'POST'])
+def search_notes():
+    if 'user_id' not in session:
+        flash('Please log in before trying to search notes')
+        return redirect('/login')
+
+    if request.method == 'POST':
+        search_term = request.form.get('search_term')
+        user_id = session['user_id']
+
+        if search_term:
+            # Perform the search based on the title
+            search_results = search_notes_by_title(user_id, search_term)
+
+            return render_template('search_results.html', search_term=search_term, results=search_results)
+
+        flash('Error: Please enter a search term', 'error')
+
+    return render_template('search_notes.html')
