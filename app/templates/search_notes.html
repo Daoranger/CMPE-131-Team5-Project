@@ -1,3 +1,6 @@
+{% extends "base.html"%}
+
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,5 +13,7 @@
         <input type="text" id="search_term" name="search_term" required>
         <button type="submit">Search</button>
     </form>
+	<a href="{{ url_for('dashboard') }}"><button type="button">Back to Dashboard</button></a>
 </body>
 </html>
+{% endblock %}
