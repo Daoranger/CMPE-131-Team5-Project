@@ -30,7 +30,7 @@ Noted! is a website designed to help individuals create notes and a to-do list f
 
 ### Contribution
 * Hoang worked on:
-  * Login, Register/Create an Account, Logout
+  * Login, Register/Create an Account, Logout, Contact Us (user send a gmail to the developer gmail)
 * Evan worked on:
   * Note feature (create/edit/delete), Database functions
 * Aadarsh worked on:
@@ -63,4 +63,8 @@ Logout:
 [1] https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login
 
 [2] https://www.techwithtim.net/tutorials/flask
+
+[3] https://www.geeksforgeeks.org/sending-emails-using-api-in-flask-mail/
+
+
 
