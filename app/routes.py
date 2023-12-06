@@ -5,8 +5,9 @@ from flask import session
 import re
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import timedelta
-from app import db
+from app import db, mail
 from flask import request
+from flask_mail import Message
 
 
 from app.dao import *
@@ -231,9 +232,31 @@ def edit_profile():
     # Render the edit profile page with the user's information
     return render_template('edit_profile.html', user=user)
     
-'''
-@myapp_obj.route("/members/<string:name>/")
-def getMember(name):
-    return escape(name)
-'''
+@myapp_obj.route("/contact_us", methods=['GET', 'POST'])
+def contact_us():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        email = request.form.get('email')
+        message = request.form.get('message')
+
+        if not name or not email or not message:
+            flash('Error: All fields are required', 'error')
+        else:
+            try:
+                # Send email using Flask-Mail
+                subject = 'Contact Form Submission'
+                sender = 'your@gmail.com'  # Replace with your Gmail address
+                recipients = ['your@gmail.com']  # Replace with the email address where you want to receive messages
+
+                msg = Message(subject, sender=sender, recipients=recipients)
+                msg.body = f"Name: {name}\nEmail: {email}\nMessage: {message}"
+
+                mail.send(msg)
+
+                flash('Your message has been sent. We will get back to you soon!', 'success')
+            except Exception as e:
+                print(f"Error sending email: {e}")
+                flash('Error sending email. Please try again later.', 'error')
+
+    return render_template('contact_us.html')
 
