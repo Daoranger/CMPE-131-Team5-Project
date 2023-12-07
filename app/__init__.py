@@ -7,6 +7,7 @@ from flask_mail import Mail
 
 # Create a flask application instance called myapp_obj
 myapp_obj = Flask(__name__)
+myapp_obj.config['WTF_CSRF_ENABLED'] = False
 
 #login_manager = LoginManager(myapp_obj)
 

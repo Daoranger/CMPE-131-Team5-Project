@@ -1,10 +1,10 @@
 from flask import render_template, flash, jsonify, redirect, url_for
-from .forms import CreateAccountForm, CreateNoteForm, EditNoteForm, LoginForm
+from .forms import CreateAccountForm, CreateNoteForm, EditNoteForm, LoginForm, UploadForm
 from app import myapp_obj
 from flask import session
 import re
 from werkzeug.security import generate_password_hash, check_password_hash
-from datetime import timedelta
+from datetime import datetime
 from app import db, mail
 from flask import request
 from flask_mail import Message
@@ -16,12 +16,7 @@ from app.models import User
 @myapp_obj.route("/")
 @myapp_obj.route("/index.html/")
 def index():
-    name = 'Carlos'
-    books = [ {'author': 'authorname1',
-                'book':'bookname1'},
-             {'author': 'authorname2',
-              'book': 'bookname2'}]
-    return render_template('hello.html',name=name, books=books)
+    return redirect('/dashboard')
 
 @myapp_obj.route("/hello/")
 def hello():
@@ -133,8 +128,6 @@ def logout():
     session.pop('user_id', None)
     flash('You have been logged out', 'success')
     return redirect(url_for('login'))
-#@myapp_obj.route("/createnote", methods = ['GET', 'POST'])
-#def createnote():
      
 @myapp_obj.route("/createnote", methods = ['GET', 'POST'])
 def createnote():
@@ -142,14 +135,20 @@ def createnote():
         flash('please log in before trying to create a note')
         return redirect('/login')
     else:
-        print(session['user_id'])
         form = CreateNoteForm()
-        print(form.validate_on_submit())
+        file_form = UploadForm()
         if form.validate_on_submit():
             print('creating new note')
             create_note(title=form.title.data, date=form.date.data, text=form.text.data)
             return redirect('/dashboard')
-        return render_template('create_note.html', form=form)
+        if file_form.validate_on_submit():
+            print("data from file:",(file_form.file.data))
+            temp_file = file_form.file.data
+            create_note(title=temp_file.filename[0:-3], date=datetime.now(), text=temp_file.read())
+            return redirect('/dashboard')
+        else:
+            print(file_form.errors)
+        return render_template('create_note.html', form=form, file_form=file_form)
 
 @myapp_obj.route("/edit/<string:noteid>/", methods =['GET', 'POST'])
 def edit_note_route(noteid):
