@@ -34,7 +34,7 @@ The website have a home page that show the name of the website
    * Use any web browser (recommended Chrome) to launch the website using the link
 3. Create your first account and explore!
 
-### Contribution
+### Milestone 2 Contribution 
 * Hoang worked on:
   * Login, Register/Create an Account, Logout, Edit User Profile (username OR password), Contact Us (user send a gmail to the developer gmail)
 * Evan worked on:
@@ -44,6 +44,10 @@ The website have a home page that show the name of the website
 * Andre worked on:
   * Proposing Requirements
 
+
+### Milestone 3 Contribution 
+* Evan worked on:
+  * Create note from file, view note page
 ### Snapshots
 Login Page:
 <img width="1000" alt="Screenshot 2023-11-29 at 8 59 44 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/assets/35211839/69f433bb-0c5b-4b2d-9048-6a52f2b78feb">
