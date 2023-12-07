@@ -76,6 +76,9 @@ def login():
 
 @myapp_obj.route("/register", methods=['GET', 'POST'])
 def createaccount():
+    if 'user_id' in session:
+        flash('Only one account please!', 'info')
+        return redirect('/dashboard')
     form = CreateAccountForm()
     print(form.validate_on_submit())
         
@@ -88,10 +91,10 @@ def createaccount():
     if form.password.data != form.password_confirm.data:
         flash('Error: Password do not match', 'error')
         return render_template('create_account.html', form=form)
-                
-    #Check if Fullname only contain letters
-    if form.name.data and (not isinstance(form.name.data, str) or not re.match("^[A-Za-z]*$", form.name.data)):
-        flash('Error: Full name can only contain letters', 'error')
+    
+    # Check if Fullname only contains letters and spaces
+    if form.name.data and (not isinstance(form.name.data, str) or not re.match("^[A-Za-z\s]*$", form.name.data)):
+        flash('Error: Full name can only contain letters and spaces', 'error')
         return render_template('create_account.html', form=form)
         
     #Submit and if valid
