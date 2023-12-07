@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, DateTimeField, TextAreaField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, DateTimeField, TextAreaField, FileField
 from wtforms.validators import DataRequired, Email, EqualTo, ValidationError
 from datetime import datetime
 
@@ -24,6 +24,10 @@ class CreateNoteForm(FlaskForm):
     date = DateTimeField('Date', validators=[DataRequired()], default=datetime.now())
     text = TextAreaField('Note', validators=[DataRequired()])
     submit = SubmitField('Create Note', validators=[DataRequired()])
+
+class UploadForm(FlaskForm):
+    file = FileField('File', validators=[DataRequired()])
+    submit = SubmitField('Create Note From File')
 
 class EditNoteForm(FlaskForm):
     title = StringField('Note title', validators=[DataRequired()])

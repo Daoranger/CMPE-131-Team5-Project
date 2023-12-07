@@ -24,4 +24,15 @@
 	</p>
 	<p>{{form.submit()}}</p>
 </form>
+
+<h1>Or upload from .txt file</h1>
+<form action="" method="POST" novalidate enctype="multipart/form-data">
+	{{form.hidden_tag()}}
+	<p>
+		{{file_form.file.label}}<br>
+		{{file_form.file}}
+	</p>
+	<p>{{file_form.submit()}}</p>
+
+</form>
 {% endblock %}
