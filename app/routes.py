@@ -5,9 +5,9 @@ from flask import session
 import re
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
-from app import db
+from app import db, mail
 from flask import request
-
+from flask_mail import Message
 
 
 from app.dao import *
@@ -71,6 +71,9 @@ def login():
 
 @myapp_obj.route("/register", methods=['GET', 'POST'])
 def createaccount():
+    if 'user_id' in session:
+        flash('Only one account please!', 'info')
+        return redirect('/dashboard')
     form = CreateAccountForm()
     print(form.validate_on_submit())
         
@@ -83,10 +86,10 @@ def createaccount():
     if form.password.data != form.password_confirm.data:
         flash('Error: Password do not match', 'error')
         return render_template('create_account.html', form=form)
-                
-    #Check if Fullname only contain letters
-    if form.name.data and (not isinstance(form.name.data, str) or not re.match("^[A-Za-z]*$", form.name.data)):
-        flash('Error: Full name can only contain letters', 'error')
+    
+    # Check if Fullname only contains letters and spaces
+    if form.name.data and (not isinstance(form.name.data, str) or not re.match("^[A-Za-z\s]*$", form.name.data)):
+        flash('Error: Full name can only contain letters and spaces', 'error')
         return render_template('create_account.html', form=form)
         
     #Submit and if valid
@@ -230,13 +233,51 @@ def edit_profile():
 
     # Render the edit profile page with the user's information
     return render_template('edit_profile.html', user=user)
-'''
-@myapp_obj.route("/upload/", methods=['GET', 'POST'])
-def upload_file():
-'''
-'''
-@myapp_obj.route("/members/<string:name>/")
-def getMember(name):
-    return escape(name)
-'''
+    
+@myapp_obj.route("/contact_us", methods=['GET', 'POST'])
+def contact_us():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        email = request.form.get('email')
+        message = request.form.get('message')
 
+        if not name or not email or not message:
+            flash('Error: All fields are required', 'error')
+        else:
+            try:
+                # Send email using Flask-Mail
+                subject = 'Contact Form Submission'
+                sender = 'your@gmail.com'  # Replace with your Gmail address
+                recipients = ['your@gmail.com']  # Replace with the email address where you want to receive messages
+
+                msg = Message(subject, sender=sender, recipients=recipients)
+                msg.body = f"Name: {name}\nEmail: {email}\nMessage: {message}"
+
+                mail.send(msg)
+
+                flash('Your message has been sent. We will get back to you soon!', 'success')
+            except Exception as e:
+                print(f"Error sending email: {e}")
+                flash('Error sending email. Please try again later.', 'error')
+
+    return render_template('contact_us.html')
+
+@myapp_obj.route("/search_notes", methods=['GET', 'POST'])
+def search_notes():
+    if 'user_id' not in session:
+        flash('Please log in before trying to search notes')
+        return redirect('/login')
+
+    if request.method == 'POST':
+        search_term = request.form.get('search_term')
+        user_id = session['user_id']
+
+        if search_term:
+            # Perform the search based on the title
+            search_results = search_notes_by_title(user_id, search_term)
+
+            return render_template('search_results.html', search_term=search_term, results=search_results)
+
+        flash('Error: Please enter a search term', 'error')
+
+    return render_template('search_notes.html')

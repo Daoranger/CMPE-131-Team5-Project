@@ -9,13 +9,19 @@ Noted! is a website designed to help individuals create notes and a to-do list f
 - [Snapshots](#snapshots)
 - [References](#references)
 
-### Intended Usage (Purposes)
+### Purposes
 
-### Goals
+The purposes of this project is to put into practice what we've learned in the CMPE-131: Software Engineering course by building a website. We're using Python, Flask, HTML, and SQLAlchemy to create it. Flask helps with the behind-the-scenes stuff, HTML is for how it looks, and SQLAlchemy manages the database. The aim is to bring all these pieces together smoothly to make a functional and well-designed website. 
 
-### Functionality
+Moreover, in addition to building the website, our project aims to enhance our understanding of crucial tools and concepts in software engineering. This includes gaining proficiency in Linux commands for efficient system management, utilizing GitHub for version control, and mastering Git for collaborative development. By incorporating these skills, we aim to cultivate a comprehensive understanding of the broader software engineering ecosystem, preparing ourselves for real-world applications and collaborative software development practices.
 
-### User Operations
+### Goals and Intended Usage
+
+Our goal is to create a website that allow user to use it as an application that would help create note and todo-list. Our targeted audience range from students to adults to anyone who need a free and simple application that would help them store their important notes and create a list for their tasks. Morever, the website should have many features that allow user to have control customization over their account like any other baisc websites. The main goals of this website are provide users a free, simple, reliable and secure website.
+
+### Functionality and User Operations
+
+The website have a home page that show the name of the website 
 
 ### Steps to Run the Website
 1. Create a clone repo of our website
@@ -30,7 +36,7 @@ Noted! is a website designed to help individuals create notes and a to-do list f
 
 ### Contribution
 * Hoang worked on:
-  * Login, Register/Create an Account, Logout
+  * Login, Register/Create an Account, Logout, Edit User Profile (username OR password), Contact Us (user send a gmail to the developer gmail)
 * Evan worked on:
   * Note feature (create/edit/delete), Database functions
 * Aadarsh worked on:
@@ -63,4 +69,8 @@ Logout:
 [1] https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login
 
 [2] https://www.techwithtim.net/tutorials/flask
+
+[3] https://www.geeksforgeeks.org/sending-emails-using-api-in-flask-mail/
+
+
 
