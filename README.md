@@ -73,7 +73,7 @@ Our goal is to create a website that allow user to use it as an application that
   * Create note from file, view note page
  
 ### Video Presentation
-<iframe src="https://drive.google.com/file/d/1ZhYlfpNtDpuc4CYg7VwsJqp6m1b8HS8c/preview" width="640" height="480" allow="autoplay"></iframe>
+https://drive.google.com/file/d/1ZhYlfpNtDpuc4CYg7VwsJqp6m1b8HS8c/preview
 
 ### Snapshots
 Registar Page:
