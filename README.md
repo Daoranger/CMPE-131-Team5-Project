@@ -33,6 +33,12 @@ Our goal is to create a website that allow user to use it as an application that
   * Edit Note: Users can edit a note. This feature allows users to modify notes that need to be updated.
   * Create note form file:  Users can create a note from a file. This feature allows users to import notes from other sources.
   * View note page: Users can view a note page. This feature allows users to see all the details of a note in one place.
+3. To-do List
+  * Add task: Users can add a task. This feature allows users to keep track of things they need to do.
+  * Delete task: Users can delete a task. This feature allows users to remove tasks that are no longer needed.
+  * Mark task:  Users can mark a task as complete. This feature allows users to keep track of what they have accomplished and what they need to complete.
+  * Reset todo list: Users can reset the to-do list. This feature allows users to start fresh with a new to-do list.
+
 
 ### Steps to Run the Website
 1. Create a clone repo of our website
