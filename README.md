@@ -71,6 +71,10 @@ Our goal is to create a website that allow user to use it as an application that
 ### Milestone 3 Contribution 
 * Evan worked on:
   * Create note from file, view note page
+ 
+### Video Presentation
+https://drive.google.com/file/d/1ZhYlfpNtDpuc4CYg7VwsJqp6m1b8HS8c/view?usp=drive_link
+
 ### Snapshots
 Registar Page:
 <img width="1000" alt="Screenshot 2023-11-29 at 9 06 18 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/blob/2dc47724ecde4a7455b34b0fa0fc29998eaeba3b/snapshots/createaccount.png">
@@ -107,6 +111,4 @@ Logout:
 [2] https://www.techwithtim.net/tutorials/flask
 
 [3] https://www.geeksforgeeks.org/sending-emails-using-api-in-flask-mail/
-
-
 
