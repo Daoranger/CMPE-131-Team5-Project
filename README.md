@@ -59,7 +59,7 @@ Our goal is to create a website that allow user to use it as an application that
 
 ### Milestone 2 Contribution 
 * Hoang worked on:
-  * Login, Register/Create an Account, Logout, Edit User Profile (username OR password), Contact Us (user send a gmail to the developer gmail)
+  * Login, Register/Create an Account, Logout
 * Evan worked on:
   * Note features (create/edit/delete), Database functions
 * Aadarsh worked on:
@@ -71,6 +71,8 @@ Our goal is to create a website that allow user to use it as an application that
 ### Milestone 3 Contribution 
 * Evan worked on:
   * Create note from file, view note page
+* Hoang worked on:
+  * Edit User Profile (username OR password), Contact Us (user send a gmail to the developer gmail), Search Note Function by Title, Video Presentation
  
 ### Video Presentation
 https://drive.google.com/file/d/1ZhYlfpNtDpuc4CYg7VwsJqp6m1b8HS8c/preview
