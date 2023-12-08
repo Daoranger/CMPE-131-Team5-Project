@@ -66,20 +66,29 @@ Our goal is to create a website that allow user to use it as an application that
 * Evan worked on:
   * Create note from file, view note page
 ### Snapshots
+Registar Page:
+<img width="1000" alt="Screenshot 2023-11-29 at 9 06 18 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/blob/2dc47724ecde4a7455b34b0fa0fc29998eaeba3b/snapshots/createaccount.png">
+
 Login Page:
-<img width="1000" alt="Screenshot 2023-11-29 at 8 59 44 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/assets/35211839/69f433bb-0c5b-4b2d-9048-6a52f2b78feb">
+<img width="1000" alt="Screenshot 2023-11-29 at 8 59 44 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/snapshots/login.png">
 
 Home Page:
-<img width="1000" alt="Screenshot 2023-11-29 at 9 04 47 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/assets/35211839/5e581ef6-b634-413c-bb15-cdb8b9d3ef8a">
+<img width="1000" alt="Screenshot 2023-11-29 at 9 04 47 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/blob/main/snapshots/Dashboard.png">
 
 Creating a Note:
-<img width="1000" alt="Screenshot 2023-11-29 at 9 07 57 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/assets/35211839/7f46ed81-9e02-43b0-97f3-b1dbd7948148">
+<img width="1000" alt="Screenshot 2023-11-29 at 9 07 57 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/blob/2dc47724ecde4a7455b34b0fa0fc29998eaeba3b/snapshots/createnote.png">
+
+Search a Note:
+<img width="1000" alt="Screenshot 2023-11-29 at 9 07 57 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/blob/2dc47724ecde4a7455b34b0fa0fc29998eaeba3b/snapshots/search.png">
 
 To Do List:
-<img width="1000" alt="Screenshot 2023-11-29 at 9 05 33 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/blob/151c1c04245ca86ab6bde748797118b65ca7690c/snapshots/todo.png">
+<img width="1000" alt="Screenshot 2023-11-29 at 9 05 33 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/blob/2dc47724ecde4a7455b34b0fa0fc29998eaeba3b/snapshots/todo.png">
 
-Registar Page:
-<img width="1000" alt="Screenshot 2023-11-29 at 9 06 18 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/assets/35211839/4b154275-6d95-4c52-8ae1-273e916cb59c">
+Edit Profile Page:
+<img width="1000" alt="Screenshot 2023-11-29 at 9 06 18 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/blob/2dc47724ecde4a7455b34b0fa0fc29998eaeba3b/snapshots/editprofile.png">
+
+Contact Us Page:
+<img width="1000" alt="Screenshot 2023-11-29 at 9 06 18 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/blob/2dc47724ecde4a7455b34b0fa0fc29998eaeba3b/snapshots/contact.png">
 
 Logout:
 <img width="1000" alt="Screenshot 2023-11-29 at 9 07 00 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/assets/35211839/072306b1-3af1-4d55-8290-a4bc9a0af491">
