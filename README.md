@@ -1,7 +1,13 @@
 # Noted!
 ## Team 5: [Team Lead] Hoang Nguyen (@Daoranger), Aadarsh Marahatta (@amarahatta), Evan Nishi (@Evan-Nishi), Andre Nassar (@Andrenassar)
 
-Noted! is a website designed to help individuals create notes and a to-do list for themselves. The website allowes user to register for an account, log into the account with Google Authentication and editing their user profile. The main features of this website are the ability for the users to create notes for themeslves and create a todo-list for their tasks. The user can create/edit/delete multiples notes. For the to-do list, the user can create/delete tasks and mark them as complete or incomplete.
+Noted! is a website that helps individuals create notes and to-do lists for themselves. Users can register for an account, log in with Google Authentication, and edit their user profile. The website’s main features include the ability to create, edit, and delete multiple notes and to-do list tasks.
+
+When creating a note, users can add a title and a description. Users can edit and delete their notes at any time.
+
+For the to-do list, users can create tasks and mark them as complete or incomplete. They can also delete tasks that are no longer needed. The website allows users to reset their to-do list to start fresh with a new empty list. 
+
+Noted! is a great tool for anyone who wants to stay organized and keep track of their tasks and notes all in one place. It’s easy to use and has a clean and simple interface that makes it easy to navigate. Give it a try and let us know what you think!
 
 # Table of Contents
 - [Steps to Run the Website](#steps-to-run-the-website)
@@ -55,9 +61,9 @@ Our goal is to create a website that allow user to use it as an application that
 * Hoang worked on:
   * Login, Register/Create an Account, Logout, Edit User Profile (username OR password), Contact Us (user send a gmail to the developer gmail)
 * Evan worked on:
-  * Note feature (create/edit/delete), Database functions
+  * Note features (create/edit/delete), Database functions
 * Aadarsh worked on:
-  * To-do list feature (create/delete/marking)
+  * To-do list features (create/delete/marking/reset)
 * Andre worked on:
   * Proposing Requirements
 
