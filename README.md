@@ -11,7 +11,8 @@ Noted! is a great tool for anyone who wants to stay organized and keep track of 
 
 # Table of Contents
 - [Steps to Run the Website](#steps-to-run-the-website)
-- [Contribution](#contribution)
+- [Contribution](#milestone-2-contribution)
+- [Video Presentation](#video-presentation)
 - [Snapshots](#snapshots)
 - [References](#references)
 
