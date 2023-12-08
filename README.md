@@ -76,7 +76,7 @@ Creating a Note:
 <img width="1000" alt="Screenshot 2023-11-29 at 9 07 57 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/assets/35211839/7f46ed81-9e02-43b0-97f3-b1dbd7948148">
 
 To Do List:
-<img width="1000" alt="Screenshot 2023-11-29 at 9 05 33 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/assets/35211839/087cd973-a7c5-4660-9c0c-d86c9709edbd">
+<img width="1000" alt="Screenshot 2023-11-29 at 9 05 33 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/blob/151c1c04245ca86ab6bde748797118b65ca7690c/snapshots/todo.png">
 
 Registar Page:
 <img width="1000" alt="Screenshot 2023-11-29 at 9 06 18 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/assets/35211839/4b154275-6d95-4c52-8ae1-273e916cb59c">
