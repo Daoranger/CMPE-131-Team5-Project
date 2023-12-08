@@ -73,8 +73,8 @@ Our goal is to create a website that allow user to use it as an application that
   * Create note from file, view note page
  
 ### Video Presentation
-[![Tutorial Presentation]([https://drive.google.com/uc?id=FILE_ID](https://drive.google.com/file/d/1ZhYlfpNtDpuc4CYg7VwsJqp6m1b8HS8c/view?usp=drive_link))]([https://drive.google.com/uc?id=FILE_ID](https://drive.google.com/file/d/1ZhYlfpNtDpuc4CYg7VwsJqp6m1b8HS8c/view?usp=drive_link
-)
+<iframe src="https://drive.google.com/file/d/1ZhYlfpNtDpuc4CYg7VwsJqp6m1b8HS8c/preview" width="640" height="480" allow="autoplay"></iframe>
+
 ### Snapshots
 Registar Page:
 <img width="1000" alt="Screenshot 2023-11-29 at 9 06 18 PM" src="https://github.com/Daoranger/CMPE-131-Team5-Project/blob/2dc47724ecde4a7455b34b0fa0fc29998eaeba3b/snapshots/createaccount.png">
