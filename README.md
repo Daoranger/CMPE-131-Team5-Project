@@ -21,7 +21,18 @@ Our goal is to create a website that allow user to use it as an application that
 
 ### Functionality and User Operations
 
-The website have a home page that show the name of the website 
+1. Main
+  * Register: Users can register a new account with a username, password, and email. This feature is essential for creating a personalized experience for users.
+  * Login: Users are able to log in to their account and manage their notes. This feature allows users to access their notes from any device and keep them secure.
+  * Logout: Users can log out of their account. This feature ensures that users’ accounts are secure and that they are not accidentally logged in to their account on a public device.
+  * Edit profile: Users can edit their account to change their username and password. This feature allows users to customize their account and keep their information up-to-date.
+  * Contact us: Users can contact developers with feedback or any issues. This feature provides a way for users to get help when they need it and provide feedback to improve the app.
+2. Notes
+  * Create Note:  Users can create a note. This feature allows users to jot down ideas, thoughts, and reminders.
+  * Delete Note:  Users can delete a note. This feature allows users to remove notes that are no longer needed.
+  * Edit Note: Users can edit a note. This feature allows users to modify notes that need to be updated.
+  * Create note form file:  Users can create a note from a file. This feature allows users to import notes from other sources.
+  * View note page: Users can view a note page. This feature allows users to see all the details of a note in one place.
 
 ### Steps to Run the Website
 1. Create a clone repo of our website
