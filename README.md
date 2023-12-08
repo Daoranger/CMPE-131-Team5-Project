@@ -73,7 +73,7 @@ Our goal is to create a website that allow user to use it as an application that
   * Create note from file, view note page
  
 ### Video Presentation
-[Tutorial Presentation]([https://drive.google.com/uc?id=FILE_ID](https://drive.google.com/file/d/1ZhYlfpNtDpuc4CYg7VwsJqp6m1b8HS8c/view?usp=drive_link))]([https://drive.google.com/uc?id=FILE_ID](https://drive.google.com/file/d/1ZhYlfpNtDpuc4CYg7VwsJqp6m1b8HS8c/view?usp=drive_link
+[![Tutorial Presentation]([https://drive.google.com/uc?id=FILE_ID](https://drive.google.com/file/d/1ZhYlfpNtDpuc4CYg7VwsJqp6m1b8HS8c/view?usp=drive_link))]([https://drive.google.com/uc?id=FILE_ID](https://drive.google.com/file/d/1ZhYlfpNtDpuc4CYg7VwsJqp6m1b8HS8c/view?usp=drive_link
 )
 ### Snapshots
 Registar Page:
